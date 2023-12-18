@@ -1,6 +1,7 @@
 # typed-fn
 
 This module allows to make functions with typechecking
+
 Example:
 ```typescript
 import { z } from 'zod'
@@ -51,4 +52,7 @@ for await (const parsed of fn('123 465')) {
 // 456
 ```
 
-And middlewares like [lock](./src/middlewares/lock.test.ts) (don't allow to call callback simultaneuosly), [cache](./src/middlewares/cache.test.ts) and [expiration]((./src/middlewares/expiration.test.ts)) (allows to set timeout for callback)
+And middlewares like
+[lock](https://github.com/aliksend/typed-fn/blob/main/src/middlewares/lock.test.ts) (don't allow to call callback simultaneuosly),
+[cache](https://github.com/aliksend/typed-fn/blob/main/src/middlewares/cache.test.ts) and
+[expiration](https://github.com/aliksend/typed-fn/blob/main/src/middlewares/expiration.test.ts) (allows to set timeout for callback)
