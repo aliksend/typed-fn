@@ -1,0 +1,29 @@
+{
+  "name": "typed-fn",
+  "version": "1.0.0",
+  "description": "Functions with realtime type checking",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "rm -rf dist && tsc",
+    "test": "node --require ts-node/register --test --watch ./src/*.test.ts ./src/**/*.test.ts",
+    "lint:fix": "npx aliksend-linter --fix"
+  },
+  "keywords": ["zod", "runtime type check", "validation", "function"],
+  "author": "Alik Send",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliksend/typed-fn.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
